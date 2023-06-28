@@ -10,7 +10,7 @@ jobs:
       contents: write
     steps:
       - name: clone
-        run: git clone ${{ github.server_url }}${{ github.repository }} -b ${{ github.ref }}
+        run: git clone ${{ github.server_url }}\/${{ github.repository }} -b ${{ github.ref }}
       - name: Assemble profile
         id: assemble-profile
         uses: afflom/trestle-bot@main
