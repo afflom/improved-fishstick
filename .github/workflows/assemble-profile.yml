@@ -19,6 +19,6 @@ jobs:
         with:
           markdown_path: "markdown/profiles"
           assemble_model: "profile"
-          commit_message: "test commit"
+          commit_message: ""test commit""
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
