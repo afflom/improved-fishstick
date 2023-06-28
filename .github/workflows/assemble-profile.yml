@@ -9,8 +9,11 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: clone
-        run: git clone ${{ github.server_url }}/${{ github.repository }} -b ${{ github.ref_name }}
+      - name: Clone
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref_name }}
+          set-safe-directory: '.'
       - name: Assemble profile
         id: assemble-profile
         uses: afflom/trestle-bot@main
