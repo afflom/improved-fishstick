@@ -1,11 +1,6 @@
 name: Profile Assemble
 on:
-  workflow_call:
-  workflow_dispatch:
-
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  push
   
 jobs:
   auto-update:
