@@ -9,10 +9,8 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Clone
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ github.head_ref }}
+      - name: clone
+        run: git clone ${{ github.repository }} -b ${{ github.head_ref }}
       - name: Assemble profile
         id: assemble-profile
         uses: afflom/trestle-bot@main
