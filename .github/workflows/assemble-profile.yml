@@ -15,7 +15,7 @@ jobs:
           ref: ${{ github.head_ref }}
       - name: Assemble profile
         id: assemble-profile
-        uses: RedHatProductSecurity/trestle-bot@main
+        uses: afflom/trestle-bot@main
         with:
           markdown_path: "markdown/profiles"
           assemble_model: "profile"
